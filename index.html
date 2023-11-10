@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="javascript/learn-to-code.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover&Speak Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav> <!--Se usa class para dar estilos a los elemento no ID, el ID  nos permite interactuar con una pagina de Java Script-->
+        <ul class="topnav" id="dropdowniconClick">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Resources">Resources</a></li>
+            <li><a href="#ContactUs">Contact Us</a></li>
+            <li><a href="#About">About</a></li>
+            <li class="topnavright"><a href="#SignUp">Sign Up</a></li>
+            <li class="topnavright"><a href="#SignIn">Sign In</a></li>
+            <li class="dropdownicon"><a href="javascript:avoid(0);" onclick="dropdownMenu()">&#9776;</a></li> <!--Icono desplegable-->
+        </ul>
+        <!-- El javascript:Avoid(0); lo ponemos ahi para que el navegador entienda que esta indefinida la accion al hacer click en ese anchor ok? esto lo pusimos en el paso en el que dabamos click en el desplegable y no quedaba estatico los eleementos sin oque se desaparecia precisamente porque el navegador como era un elemento anchor y se supone que busca hacer una accion no sabia que hacer porque staba vacio-->
+        <!--Asi que en resumen lo que hace el navegador es dejarlo abierto porque esta indefinido-->
+
+        <!--Queremos que JavaScript interactue con este <ul></ul> al darle click al icono-->
+    </nav>
+    <!--Quiero que el class topnav se vuelva una class special, al momento de hacer click se cree una nueva class que tenga esas propiedades que qeremos en el boton del desplegable-->
+    <!--La x es nuestro id-->
+    
+    <div class="container" id="section-1-gradient">
+        <div class="row">
+            <div class="col-6">
+                 <div class="leftSide-col"> <!-- Creo este div porque en el futuro quiza trabaje con lo que este aqui en este pedazo de la columna-->
+                    <h1 class="large">Bilingual Club</h1>
+                    <h1 class="large">Join us!</h1>
+                 </div>
+                 <form> 
+                    <div class="leftSide-col">
+                        <h2>Username</h2>
+                        <input class="inputbox" name="username" type="text" placeholder="Username">
+                        <h2>Password</h2>
+                        <input class="inputbox" name="password" type="text" placeholder="Password here">
+                    </div>
+                 </form>
+            </div>
+            <div class="col-6">
+              <div class="rightSide-col">
+                <div class="videoContainer">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ASWXB7seEj0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>  
+            </div>
+        </div>
+    </div>
+
+    <header> <!--Queremos que el header este en el centro de arriba del container porque pondremos tres columnas dentro de ese container nuevo. El header tag actua como un container de lo que lleve dentro (interesante tip). Header son como un bloque, en resumen. BTW Los header no se ponen en los footer.   -->
+        <h1 class="section2header">Beginner and Intermediate Courses </h1>
+    </header>
+    <div class="container">
+        <div class="row"> <!--Nuestras columnas van a existir inside this row-->
+            <div class="col-4">
+                <div class="box">
+                    <div class="icon" > <!--Add a class in order to adjust it -->
+                        <img src="Future-languages.jpg">
+                    </div>
+                    <label>Beginner level - Emotions</label>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="box">
+                    <div class="icon" > <!--Add a class in order to adjust it -->
+                        <img src="Future-languages.jpg">
+                    </div>
+                    <label>Intermediate level - Healthy Lifestyle</label>
+                    <p>"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="box">
+                    <div class="icon" > <!--Add a class in order to adjust it -->
+                        <img src="Future-languages.jpg">
+                    </div>
+                    <label> Both Levels - El Dinero</label>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+                </div>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="col-12">
+                <button class="learnMore">Learn more</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row"> <!--Estamos estructurando todas las columnas dentro de la  fila-->
+        <div class="col-7">
+            <article>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p> <!--Agrega automatico el margen de arriba y abajo de mi text-->
+            </article>
+        </div>
+        <div class="col-5">
+            <div class="estudiossIcon">
+            <img src="estudioss.jpg">
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <footer class="footsy">
+        <div class="row">
+            <div class="col-3 mobileStack">
+                <h1>Contact</h1> <!--h tags made automatically a margin of top and bottom, y da como un display block as well, so we can stack other information under here-->
+                <ul>
+                    <li>Email</li>
+                    <li>Phone</li>
+                    <li>Online Support</li>
+                </ul>
+            </div>
+
+            <div class="col-3 mobileStack">
+                <h1>Resources</h1> 
+                <ul>
+                    <li>Puzzles</li>
+                    <li>Games</li>
+                    <li>Conversations</li>
+                </ul>
+            </div>
+
+            <div class="col-3 mobileStack">
+                <h1>Social Media</h1> 
+                <ul>
+                    <li>Instagram</li>
+                    <li>Tik Tok</li>
+                    <li>Telegram</li>
+                </ul>
+            </div>
+
+            <div class="col-3 mobileStack">
+                <h1>Payment</h1> 
+                <ul>
+                    <li>Binance</li>
+                    <li>Paypal</li>
+                    <li>AirTm</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        function dropdownMenu() {
+            var x = document.getElementById("dropdowniconClick"); /*Make a new variable "x" (they are like boxes that we can put things inside and use then)*/
+            if(x.className === "topnav") {
+                x.className += " responsive"; /* Si el elemento x tiene la clase "topnav" add una new class called "Responsive" EL CUAL RECIBIRA ALGUNOS ESTILOS QUE LO HARAN VERSE DIFERENTE. esto se usara en media query, El espacio es porque en <nav> <ul class="topnav" hay que convertirla en class="topnav responsive" ese espacio entre topnav y responsive ps.*/
+                /*change topnav to topnav.responsive, <-- this new class is created*/
+                    /*se agrega responsive cuando el boton se selecciona con el click*/
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+</body>
+</html>

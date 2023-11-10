@@ -1,0 +1,299 @@
+nav,
+header,
+footer{
+    display: block;
+}
+
+body{
+    line-height: 1;
+    margin: 0;
+}
+
+label {
+    font-size: 25px;
+    font-weight: 600; /*Also works put bold*/
+}
+
+p{
+    font-size: 28px;
+    line-height: 1.2; /*como el interlineado*/
+}
+
+article p {
+    font-size: 35px;
+    padding: 20px; /*The reason we dont add a margin but a padding instead is bc estariamos forzandolo a que se pasara la columna derecha, o sea saldria el texto de su cajita. Instead when we use padding, it takes the element and the size is the same, increases the space without forcing space and messing up our columns*/
+}
+
+.container {
+    width: 100%;
+    margin: auto; /*all elements inside the container will be center in the container*/
+    padding-top: 4%;
+    padding-bottom: 4%; 
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* para que lo que sobresalga del contenedor se alinee al container y no sobresalga sino que se distribuya bien*/
+    align-items: center;
+}
+
+/*What we want with this after is reset the row to clear out any of the content and just start with fresh new rows for our sections.*/
+.row::after {
+    display: table; 
+    clear: both; /*remove any FLOAT(right or left) q hayan en algunos de esos elementos, asi no es hereditado en la siguiente row que creemos*/
+    content: "";
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+*{
+    box-sizing: border-box; /*just include the padding and the margin into the size of our element and make it the actual size, porque de forma predeterminada dan una dimension estandar. Asi que por ejemplo si tu anades una img de 100px pero dsps un padding de 5 px eso daria 110 y no se ajustaria, con esta propiedad queda ajustado*/
+
+}
+
+
+nav{
+    width: 100%;
+    margin: 0; /*Para no tener espacios extras sino que quede pegadito al margen de la pag web*/
+}
+
+nav ul {
+    background-color: #fef6e4;
+    overflow: hidden; /*Cuando en los tlf veamos que se colapsa la info, esto hara que no aparezca, que no muestre ese desorden*/
+    margin: 0;
+    padding: 0; /*para que el margin y padding lo pongan todos en los limites.*/
+}
+
+ul.topnav li {
+    list-style: none;
+    float: left;
+}
+
+ul.topnav li.topnavright{
+    float: right;
+}
+
+ul.topnav li a {
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    padding: 14px;
+    text-transform: uppercase;
+    color: #172c66;
+}
+
+ul.topnav li a:hover{
+    background-color: pink;
+    color: white;
+}
+
+ul.topnav .dropdownicon{
+    display: none; /*Para que no aparezca en las desktop*/
+}
+
+/*##### Custom styles #######*/
+
+#section-1-gradient{
+    background-image: linear-gradient(#a786df, #fec7d7);
+}
+
+div.box {
+    text-align: center;
+    margin: 24px; /*espacio entre las img, las cajitas de cada img*/
+    padding: 36px 24px 40px 24px; /*Top, right, bottom, left */
+    border-radius: 7px;
+    background-color: #232946;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.15),
+    0 2px 3px 0 rgba(0,0,0,.1); 
+    /*Aqui se explica https://www.cssmatic.com/box-shadow*/
+}
+
+div.estudiossIcon img{
+    display: block;  
+    margin: auto; /*its going to take the extra space in this element and space evenly*/
+    box-shadow: -2px/*Hor*/ -2px /*Vert*/ 20px/*Blur*/ 2px/*Spread, difucion*/ rgba(0/*(shadow)*/, 0/*background*/, 0/*box color*/, .15 /*Opacity*/), 2px /*(down)*/ 2px /*(right)*/ 17px 2px rgba(0,0,0,1) ; /*the negtive means pull it on the left and pull it up */
+}
+
+div.icon img {
+    width: 100%; /*Para asegurarme que no cambie la dimension*/
+}
+
+button {
+    font-size: 32px;
+    font-weight: 700; /*Esto es para que quede negrito*/
+    color: #232946;
+    background-color: #eebbc3;
+    padding: 15px 60px; /*Top and bottom de 15px, left and right 60px*/
+    display: block;
+    text-align: center;
+    margin: 5px;
+    border-radius: 7px;
+}
+
+button.learnMore{
+    display: block;
+    margin: auto; /*toma todo el espacio que sobra y lo distribuye de forma proporcional een nuestro elemento*/
+}
+
+.leftSide-col {
+    margin-left: 30%; /*Con porcentajes porque asi en dispositivos peque;os se ajustara mejor*/
+}
+
+.rightSide-col {
+    margin-left: 25%;
+}
+
+
+h1.large {
+    color: white;
+    font-size: 56px;
+    margin: 0; /*So, the text is next to each other*/
+    line-height: 70px ; /*Is smarter to use this to separate de words (up and down, the middle)*/
+}
+
+h1.section2header {
+    font-size: 65px;
+    text-align: center;
+}
+
+article p {
+    font-size: 25px;
+}
+
+form h2 {
+    color: #fff;
+}
+
+/*Esto > [] es para especificar que el input a seleccionar es el de ese tipo*/
+input[type="text"]{
+    font-size: 15px;
+    width: 200px;
+    min-width: 100px; /*Eso es lo minimo que va a tener en cualquier dispositivo*/
+    padding: 5px; /*Padding dentro del input*/
+    border-radius: 7px ;
+}
+
+footer.footsy{
+    background-color: #b8c1ec;
+    padding-left: 10%; /*del 100% hago un espacio solo de 10%, si usara margin el espacio seria de footer, del fondo que coloree de azulito claro, de lo de afuera ps*/
+
+}
+
+footer.footsy h1{
+    color: #fff;
+    font-size: 35px;
+}
+
+footer.footsy ul{
+    list-style: none;
+    text-align: left;
+    padding-left: 0; /*para quitar el padding que tenia de 4 (en inspector sale)*/
+}
+
+footer .footsy ul li {
+    color: #fff;
+    font-size: 22px;
+    line-height: 1.2; /*separacion entre texto de arriba y texto de abajo*/
+}
+
+
+/* TLFONOS, CONFIG. MEDIA QUERYS. PARA QUE DESAPAREZCAS LOS ELEM DEL NAVBAR EN DIMENSIONES DEL TLF Y SOLO SE VEA EL ICONO DE DESPLEGABLES*/
+@media screen and (max-width: 680px) {
+    ul.topnav li:not(:nth-child(1)) {/*para q no se seleccione (osea q no desaparezca el elemento Home el cual es el primero 1)*/ 
+        display: none;
+    }
+
+    ul.topnav li.dropdownicon {
+        display: block;
+        float: right;
+    }
+
+    /* tenemos q hacer lo siguiente, xq todo esto pasa cuando le damos click al boton (Que el icono desplegable se queda abajito)*/
+    ul.topnav.responsive li.dropdownicon{
+        position: absolute; /*we're saying like hey stay in the same position, dont move!*/
+        top: 0;
+        right: 0; /*top cero y right cero para asegurarnos que no se mueva, no se vaya para ninguna esquina*/
+    }
+
+    ul.topnav.responsive { 
+        position: relative; /*De esta forma me aseguro que no se mueve mi navbar*/
+    }
+    
+    ul.topnav.responsive li{ /*li es list items*/
+        display: inline; /*its to make sure all the list items are grouped and placed within the unordered list element */
+        float: none; /*mas arriba tenemos float left y no queremos eso en los disp moviles*/
+    }
+
+    ul.topnav.responsive li a {
+        display: block; /*we're giving a place to show up, y se apilan uno encima del otro*/
+        text-align: left; /*cuando ponemos el display , display block se hace mas facil poner cosas dentro de eso. Otro dato, no usamos float porque mas arriba tenemos el text align center y  lo que queremos es sobre escribir eso peroe moviendolo a otro ladito */
+    }
+
+    h1.section2header{
+        font-size: 40px;
+    }
+
+    .col-7,
+    .col-6, /*Si el col-4 no lo a;adimos entonces esa parte va a salir chueca, las letras van a salirse de la caja, la idea es qeu se ajuste al 100% del width*/
+    .col-5,
+    .col-4 {
+        width: 100%;
+        margin: 0; /*good practice, to everything is ok with spaces and center it*/
+    }
+
+    div.mobileStack{
+        width: 50%;
+        display: block;
+
+    }
+
+    div.box{
+        padding: 5px;
+        display: block; /*Para asegurarnos que la cajas se apilan entre si, solo para estar seguros*/
+    }
+
+    div.estudiossIcon{
+        margin: 10px; /*Si este margin lo ubicaramos en div.estudiossIcon img haria el efecto de scroll porque aumentaria la dimension de la img mas ese margin extra que se le pone, entonces si lo pongo aqui es del container como tal, el espacio no es de la img, sino del container */
+    }
+
+    div.estudiossIcon img{
+        width: 100%; /* para que no quede ni chiquita ni grande y se ajuste a la pantalla */
+    }
+
+    div.leftSide-col,
+    div.rightSide-col {
+        margin: 15px;  /*Para separar y cambiar el valor en dispositivos tflfncs*/
+    }
+
+    section2header{
+        font-size: 35px;
+    }
+
+    input[type="text"] { /*Todo se va a hereditar asi que quremos cambiar solo una propiedad, algo diferente de lo que ya este arriba lo ponemos pero no es que copiamos todos de nuevo*/
+        width: 350px;
+    }
+
+    .videoContainer iframe{
+        position: relative;
+        width: 100%;
+        margin: 0; /*Para hacer que se centre*/
+        overflow: hidden; /*que no haya scroll*/
+    }
+
+    
+}
+
